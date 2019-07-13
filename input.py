@@ -1,7 +1,7 @@
 # Create a program  asks the user to enter their name and their age.
 # Any input by user will be stored in the input function and will passed to the created variable, name and age.
 # years will calculate the date given  and will subtrac the Data of Birth that given and evaluate the result.
-# program has to only accept int if user input str, has to ask user to input the right data type in the field, has to reapet until is true.
+# program has to only accept int if user input str, has to ask user to input the right data types in the field, has to reapet until is true.
 
 
 name = str(input("please input your name"))
@@ -16,7 +16,7 @@ while True:
         print('your age is:', years, '\nyour name is:', name)
         break
 
-print('Thank you ')
+print('Thank you ') 
 
 
 # some tests done here please.
