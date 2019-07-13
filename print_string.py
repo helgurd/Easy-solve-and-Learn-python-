@@ -10,9 +10,9 @@
 #---------
 # method2 called context manager where we use (With and as) and  in this method we don't need to write close() method. 
 
-# with open('str_print.txt', 'r') as f:
-#     f_contents = f.read()
-#     print (f_contents)
+with open('str_print.txt', 'r') as f:
+    f_contents = f.read()
+    print (f_contents)
 
 #print in format -------------------------------------------------------
 # Write a Python program to print the following string in a specific format (see the output). Go to the editor
