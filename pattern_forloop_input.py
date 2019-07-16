@@ -15,14 +15,33 @@
 # for i in range(10):
 #     print(str(i) * i)
 
+##.................................................
+#sample2  
+
+# #  Write a Python program to construct the following pattern, using a nested for loop.
+# # * 
+# # * * 
+# # * * * 
+# # * * * * 
+# # * * * * * 
+# # * * * * 
+# # * * * 
+# # * * 
+# # *
+
+# n = int(input("Enter Number "))
+# print('you printed', n, 'stars')
+# for i in range(n):
+#     for j in range(i):
+#         print ('*', end="")
+#     print('\n')
 
 
-# Write a Python program to construct the following pattern, using a nested loop number.
-#the program should have ueser input.
 
-n = int(input("Enter Number "))
-for num in range(n):
-    for i in range(num):
-        print (num, end=" ") #print number
-    # new line after each row to display pattern correctly
-    print("\n")
+
+
+
+
+# # # Write a Python program to construct the following pattern, using a nested loop number.
+# # #the program should have ueser input.
+
