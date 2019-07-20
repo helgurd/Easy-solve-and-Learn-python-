@@ -29,4 +29,4 @@ print(num)
 #### this code will not work as we add a different data type to the arry which it is string monkey. 
 # num= array.array('i',[1,2,3,4])
 # num.append('monkey')
-# print(num)
+# print(num) 

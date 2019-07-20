@@ -1,5 +1,5 @@
 
-# multi D Lists imbeded inside for lops 
+# multi D Array/Lists imbeded inside for lops 
 
 ###version 1 returninng in form of table and in range of soem number
 #...................................................................

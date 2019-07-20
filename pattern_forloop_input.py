@@ -40,6 +40,3 @@ for i in range(n):
 
 
 
-# # # Write a Python program to construct the following pattern, using a nested loop number.
-# # #the program should have ueser input.
-
