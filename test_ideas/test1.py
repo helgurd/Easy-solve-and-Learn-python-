@@ -350,8 +350,8 @@
     
 # print (' Guru')
 
-import subprocess
-out=subprocess.call('ipconfig')
-print (out)
+# import subprocess
+# out=subprocess.call('ipconfig')
+# print (out)
 
 
