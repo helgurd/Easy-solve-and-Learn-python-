@@ -354,4 +354,294 @@
 # out=subprocess.call('ipconfig')
 # print (out)
 
+# print (dir())
+# def fun():
+#     x=4
+#     print(x)
+    
+# num=10
+# print (dir())
+
+# def outer():
+#     x=3
+#     def inner():
+#         return(x)
+#     return inner
+
+# a =outer()
+# print (a.__name__)
+# def outer(num1):
+#     def inner_increment(num1):  # Hidden from outer code
+#         return num1 + 5
+#     num2 = inner_increment(num1)
+#     print(num1, num2)
+
+# outer(2)
+
+
+# def function1():
+#     print('Hi i am function1')
+
+
+# def function2(held):
+#     print(' Hi iam function2 now i will call vunction1')
+#     held()
+    
+# function2( function1)
+
+# def str_supper(me):
+#     def inner():
+#         inn1 = me()
+#         return inn1.upper()
+#     return inner
+  
+# def print_str():
+#     return 'good morning'
+
+# print(print_str())
+# d = str_supper(print_str)
+# print(d())
+
+# def decoUperchanger(me):
+#     def inner():
+#         str1=me()
+#         return str1.upper()
+#     return inner
+
+# def messagee():
+#     return ' hello world'
+
+# a = decoUperchanger(messagee)
+
+# print (a())
+
+####-----------------------------------------------------
+
+# def div_decorator(func):
+#     def inner(x,y):
+#         if y==0:
+#             return ' give proper input'
+#         return func(x,y)
+#     return inner
+
+
+# @div_decorator
+# def div(a, b):
+#     return a/b
+# print (div(3,0)) 
+
+
+# def plus(fun):
+#     def inner(x,y):
+#         if x >y:
+#             return ( x+y , ' But your first number was ',  int(x) )
+#         else:
+#             return x+y
+#         return fun(x,y)
+#     return inner
+    
+# @plus
+# def add(a,b):
+#     return a +b
+
+# print (add(7,5))
+
+# def outer(expr):
+#     def upper_d(func):
+#         def inner():
+#             return func() + expr
+#         return inner
+#     return upper_d
+
+# @outer('halgurd')
+# def ordinary():
+#     return'Goode Morrning  '
+
+# print (ordinary())
+
+# def main_fun(anyage):
+#     def deco(fun):
+#         def inner():
+#             return fun() + anyage
+#         return inner 
+#     return main_fun
+
+
+# @main_fun('Helgurd')
+# def morning():
+#     return ' Good morning  '
+
+
+# print (morning())
+
+# def div_decorator(fun):
+#     def inner(*any):
+#         list1= []
+#         list1 = any[1:]
+#         for i in list1:
+#             if i ==0:
+#                 return 'give normal input'
+#         return fun(*any)
+#     return inner
+    
+
+# @div_decorator
+# def div1(a,b):
+#     return a/b
+
+# @div_decorator
+# def div2(a,b,c):
+#     return a/b/c
+
+
+# print(div2(3,6,5))
+# print(div1(10,0))
+
+
+### ------------------------------------
+# import functools
+# def decorator(func):
+#     @functools.wraps(func)
+#     def inner():
+#         str1=func()
+#         return str1.upper()
+#     return inner
+
+
+# @decorator
+# def mytext():
+#     return 'hello world'
+
+# print (mytext.__name__)
+
+# def check_name(method):
+#     def inner(name_ref):
+#         if name_ref.name== 'amulya':
+#             print('Hey my name is alaso same')
+#         else:
+#             method(name_ref)
+#     return inner   
+            
+# class Printing:
+#     def __init__(self, name):
+#         self.name=name
+        
+#     def print_name(self):
+#         print('Entered user name' , self.name)
+        
+        
+# p= Printing('amulya')
+# p.print_name()
+
+# class A:
+#     pass
+
+# a=A()
+
+
+# print('This is the type' ,type(a))
+
+# print('this is the Dir' , dir(a))
+
+
+# def fun1():
+#     pass 
+
+# fun1()
+
+# print(dir(fun1()))
+
+
+##Getter and Setter in Python
+##We use getters & setters to add validation logic around getting and setting a value.
+##To avoid direct access of a class field i.e. private variables cannot be accessed directly or modified by the external user.
+# class Student: 
+#     def __init__(self, marks):
+#         self.__marks=marks
+#     def per(self):
+#         return (self.__marks/600 *100)
+       
+#     def setter(self,value):
+#         self.__marks=value
+#     def getter(self):
+#         return self.__marks
+        
+# s = Student(555)
+# #s.marks= 599
+# s.setter(666)
+# print(s.getter())
+# print(s.per(), '%')
+
+# # #print(s.marks)
+        
+# class Game:
+#     def __init__(self):
+#         self.wins = 0
+#         self.losses = 0
+
+        
+#     def won_level(self):
+#         self.wins +=1
+  
+        
+#     def lost_level(self):
+#         self.losses +=1 
+#     @property   
+#     def __score(self):
+#         return self.wins - self.losses
+  
+        
+        
+# g = Game()
+# g.wins
+# # print(g.won_level())
+
+
+# class Getset:
+#     def __init__(self):
+#         self.__number= -1
+#     @property 
+#     def value(self):
+#         print('Getting3 value')
+#         return self.__number
+#     @value.setter  
+#     def value1(self, value):
+#         print('setting value')
+#         self.__number= value
+        
+# obj2 = Getset()
+# print(obj2.value)
+# obj2.value1 = 346
+# print(obj2.value)
+
+
+# class Student:
+#     def __init__(self,name, age):
+#         self.name=name
+#         self.age= age
+#     def msg(self):
+#         return(self.name + "  " + str(self.age))
+        
+# print("object 1:")
+# s1 = Student('nia', 24)
+# print(s1.name)
+# print(s1.age)
+# s2 = Student('Ram', 55)
+# print(s2.name)
+# print(s2.age)
+
+# print(s1.msg())
+# print(s2.msg())        
+        
+        
+#..........................................
+print('Functions')
+print('........................................................')
+print('find Avrage')
+
+def avg(n1,n2,n3):
+    return(n1+n2+n3)/3.0 
+
+print (avg(3.9,3,4))
+
 
